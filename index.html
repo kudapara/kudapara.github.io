@@ -15,15 +15,11 @@
   <meta property="og:image:width" content="1500">
   <meta property="og:url" content="http://kudapara.co.zw">
   <meta property="og:description" content="I love coding and art">
-
+  <link rel="shortcut icon" href="css/images/logo.png">
   <title>Kudakwashe Paradzayi</title>
   <style>
-  .column {
-    background: green;
-    margin: 1px;
-  }
   html {
-    background: rgb(243, 243, 243);
+    background: #009e49
   }
   body {
     height: 100vh;
@@ -34,7 +30,7 @@
   .body-wrapper {
     width: 100%;
     height: 100%;
-    background: linear-gradient(9deg, #870289, #009e49);
+    background: #009e4aa6;
     padding: 0;
     margin: 0;
   }
@@ -46,18 +42,23 @@
   .is-round {
     border-radius: 50%;
   }
-  .card {
-    max-height: 400px;
+  .post-card {
+    height: 500px;
   }
 
   .tile {
     padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .card-content {
+    background: #ffffff;
   }
 
   .profile-card {
-    max-height: 60px;
+    height: auto;
+    max-height: 460px;
   }
-
   </style>
 </head>
 <body>
@@ -92,7 +93,7 @@
                 </div>
             </article>
 
-            <article v-else class="tile is-child card is-info">
+            <article v-else class="tile is-child card post-card is-info">
               <div class="card-image">
                 <figure class="image is-16by9">
                   <img :src="post.imageUrl" alt="Placeholder image">
