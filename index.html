@@ -64,6 +64,28 @@
 <body>
   <div class="body-wrapper" id="app">
     <section class="container">
+      <div class="level">
+        <div class="level-right">
+          <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <!-- navbar items, navbar burger... -->
+                <a class="navbar-item" href="/">
+                  <img src="css/images/logo.png" alt="kuda" width="28" height="28"><span style="color: transparent">..</span> Kudapara
+                </a>
+            </div>
+            <div class="navbar-menu">
+              <!-- navbar start, navbar end -->
+              <div class="navbar-end">
+                <a class="navbar-item" href="/blog/tags">
+                  TAGS
+                </a>
+                <a class="navbar-item" href="/blog/archives">
+                  ARCHIVES
+                </a>
+              </div>
+            </div></nav>
+        </div>
+      </div>
       <div class="tile is-ancestor">
         <div class="tile is-parent is-vertical" v-for="tileIndex in 3" :key="tileIndex">
           <div class="tile" v-if="posts.length" v-for="(post, postIndex) in filteredPosts(tileIndex)" :key="postIndex">
