@@ -68,19 +68,19 @@
     <section class="container">
       <div class="level">
         <div class="level-right">
-          <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+          <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <!-- navbar items, navbar burger... -->
                 <a class="navbar-item" href="/">
                   <img src="css/images/logo.png" alt="kuda" width="28" height="28"><span style="color: transparent">..</span> Kudapara
                 </a>
-                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <div class="navbar-burger burger" data-target="navbar-kp">
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
             </div>
-            <div class="navbar-menu">
+            <div class="navbar-menu" id="navbar-kp">
               <!-- navbar start, navbar end -->
               <div class="navbar-end">
                 <a class="navbar-item" href="/blog/tags">
@@ -152,6 +152,9 @@
 <script>
   var vm = new Vue({
     el: '#app',
+    mounted () {
+      this.mountBurgerActions()
+    },
     data: {
       message: 'hello from the other side',
       posts: [
@@ -184,6 +187,28 @@
       },
       filteredPosts (tileIndex) {
         return this.posts.filter((post, postIndex) => this.filterPosts(tileIndex, postIndex))
+      },
+      mountBurgerActions () {
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function ($el) {
+            $el.addEventListener('click', function () {
+
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target
+              var $target = document.getElementById(target)
+
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle('is-active')
+              $target.classList.toggle('is-active')
+
+            })
+          })
+        }
       }
     }
   })
