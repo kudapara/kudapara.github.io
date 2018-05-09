@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Kudakwashe Paradzayi</title>
+  <style>
+    body {
+      background-image: url(images/background_team.png);
+      background-position: -30px  -20px;
+
+    }
+    .container {
+      width: 60%;
+      margin: 40px auto;
+    }
+    .btnOutline {
+      background: white
+    }
+    .cancel {
+      color: orange;
+      border-color: orange;
+    }
+    .cancel:hover {
+      color: #fff;
+      background-color: orange
+    }
+
+    /* a hack to align the left edges of the inputs*/
+    label {
+      width: 450px;
+    }
+    input[type='text'], input[type='email'] {
+      height: 30px;
+    }
+    textarea {
+      width: 80%;
+    }
+    input[type='text'], input[type='email'], textarea {
+      font-family: Roboto slab, serif, ubuntu;
+      padding: 10px;
+      border: 0;
+      border-radius: 4px;
+      background: #ededeb;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Talk to me</h3>
+    <form id="contactform" action="https://formsubmit.io/send/kgparadzayi@gmail.com" method="POST">
+      <label for="name">Full Name</label>
+      <input name="name" type="text" id="name" placeholder="John Doe"> <br>
+      <label for="email">Email address</label>
+      <input name="email" type="email" id="email" placeholder="johndoe@mail.com"> <br>
+      <textarea name="comment" id="comment" rows="8"></textarea>
+  
+      <input name="_formsubmit_id" type="text" style="display:none">
+  
+      <input value="Send" type="submit" class="btnOutline"> 
+    </form>
+    <a href="/" class="btnOutline cancel"> Cancel </a>
+  </div>
+</body>
+</html>
