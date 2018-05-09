@@ -42,6 +42,11 @@ p {
   margin-top: 30px;
 }
 
+.btnOutline:hover {
+  color: #fff;
+  background-color: #2b9dff
+}
+
 .btnFilled {
   display: block;
   text-decoration: none;
