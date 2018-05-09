@@ -60,6 +60,22 @@ p {
   margin-top: 30px;
 }
 
+.btnFlat {
+  display: block;
+  text-decoration: none;
+  background: #2b9cff15;
+  color: #2b9cff;
+  border-radius: 6px;
+  width: 175px;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  margin-top: 30px;
+}
+.btnFlat:hover {
+  background: #2b9cff52;
+  color: black
+}
 /*---------NAV--------*/
 nav {
   line-height: 150px;
@@ -160,6 +176,25 @@ person h3 {
   margin-left: 50%;
 }
 
+/*------------------- Recent blog posts ---------------------------------*/
+.recentBlogs {
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap
+}
+recentBlogs h4 {
+  color: #2b9dff;
+  margin-bottom: 15px;
+}
+
+.post {
+  width: 25%;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0.5px 0.5px 3px 0.5px rgba(128, 128, 128, 0.301)
+}
 /**---------------calto action------------------*/
 .callToAction {
   text-align: center;
