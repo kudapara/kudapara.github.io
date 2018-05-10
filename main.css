@@ -64,17 +64,16 @@ p {
 .btnFlat {
   display: block;
   text-decoration: none;
-  background: #2b9cff15;
   color: #2b9cff;
   border-radius: 6px;
-  width: 175px;
+  max-width: 175px;
   height: 53px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
+  margin-left: 10px;
 }
 .btnFlat:hover {
-  background: #2b9cff52;
   color: black
 }
 /*---------NAV--------*/
@@ -114,7 +113,7 @@ header {
   padding: 0 5%;
   background-image: url(images/background_header.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: bottom right;
 }
 
@@ -149,8 +148,12 @@ header h1 {
   color: #202427;
 }
 
-person h3 {
+.person h3 {
   margin-bottom: 5px;
+}
+
+.members > .btnOutline {
+  margin: 0 auto;
 }
 
 /* ------------- about ------------*/
@@ -197,12 +200,20 @@ person h3 {
 }
 
 .post {
-  width: 25%;
+  flex: 30%;
   background: #e5ebf015;
   padding: 5px;
   margin: 10px;
   border-radius: 3px;
   box-shadow: 2px 1px 3px 0.5px rgba(128, 128, 128, 0.301)
+}
+
+.fullWidth {
+  flex: 100%
+}
+
+.recentBlogs .btnOutline {
+  margin: 30px auto;
 }
 /**---------------calto action------------------*/
 .callToAction {
@@ -243,3 +254,91 @@ footer p, footerPages {
 }
 
 /*----------------------- Responsive ---------------*/
+@media only screen and (max-width: 1000px) {
+  header {
+    height: 1600px;
+    min-height: 1600px;
+    padding: 0 5% 200px;
+    background-image: url(images/mobile_background_header.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+  }
+
+  header h1 {
+    width: 100%
+  }
+
+  .team {
+    margin: 3em 0 3em 0;
+    background-image: url(images/mobile_background_team.png);
+    background-position: center;
+  }
+  .team h1 {
+    width: 100%;
+  }
+
+  .post {
+    flex: 40%;
+  }
+
+  .about {
+    background-image: url(images/mobile_background_about.png);
+    background-size: contain;
+    height: 900px;
+    min-height: 900px;
+    overflow-y: visible;
+  }
+
+  .about h1 {
+    padding-top: 900px;
+  }
+
+  .about h1, .icons {
+    margin-left: 0
+  }
+
+  .recentBlogs {
+    margin-top: 10em
+  }
+  .callToAction {
+    margin-top: 0;
+    padding: 15em 5% 15em 5%;
+    background-size: 70%;
+  }
+  
+  .callToAction h1, .callToAction a {
+    margin-bottom: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+  header {
+    height: 1300px;
+    min-height: 1300px;
+  }
+  header h1 {
+    margin: 1em 0 0 0 ;
+  }
+
+  .post {
+    flex: 80%;
+  }
+
+  .members {
+    display: block
+  }
+  .person {
+    float: left;
+    width: 30%;
+  }
+
+  /* Clear floats after the columns */
+  .members:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
