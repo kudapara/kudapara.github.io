@@ -4,212 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kudapara" />
   <meta name="twitter:creator" content="@kudapara" />
   <meta property="og:title" content="Kudakwashe Paradzayi">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://pbs.twimg.com/profile_banners/1031312822/1524413226/1500x500">
-  <meta property="og:image:height" content="500">
-  <meta property="og:image:width" content="1500">
-  <meta property="og:url" content="http://kudapara.co.zw">
+  <meta property="og:image" content="images/open_graph_image.png">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:width" content="1350">
+  <meta property="og:url" content="https://kudapara.co.zw">
   <meta property="og:description" content="I love coding and art">
-  <link rel="shortcut icon" href="css/images/logo.png">
+  <link rel="shortcut icon" href="images/logo.png">
+  <script src="ga.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <title>Kudakwashe Paradzayi</title>
-  <style>
-  html {
-    background: #009e49
-  }
-  body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .body-wrapper {
-    width: 100%;
-    height: 100%;
-    background: #009e4aa6;
-    padding: 0;
-    margin: 0;
-  }
-  .container {
-    padding-top: 70px;
-    padding-right: 13px;
-    padding-left: 13px
-  }
-  .is-round {
-    border-radius: 50%;
-  }
-  .post-card {
-    height: 500px;
-  }
-  .navbar-end {
-    margin-right: 50px
-  }
-  .tile {
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  .card-content {
-    background: #ffffff;
-  }
-
-  .profile-card {
-    height: auto;
-    max-height: 460px;
-  }
-  </style>
-</head>
+  </head>
 <body>
-  <div class="body-wrapper" id="app">
-    <section class="container">
-      <div class="level">
-        <div class="level-right">
-          <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <!-- navbar items, navbar burger... -->
-                <a class="navbar-item" href="/">
-                  <img src="css/images/logo.png" alt="kuda" width="28" height="28"><span style="color: transparent">..</span> Kudapara
-                </a>
-                <div class="navbar-burger burger" data-target="navbar-kp">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-            </div>
-            <div class="navbar-menu" id="navbar-kp">
-              <!-- navbar start, navbar end -->
-              <div class="navbar-end">
-                <a class="navbar-item" href="/blog/tags">
-                  TAGS
-                </a>
-                <a class="navbar-item" href="/blog/archives">
-                  ARCHIVES
-                </a>
-              </div>
-            </div></nav>
-        </div>
-      </div>
-      <div class="tile is-ancestor">
-        <div class="tile is-parent is-vertical" v-for="tileIndex in 3" :key="tileIndex">
-          <div class="tile" v-if="posts.length" v-for="(post, postIndex) in filteredPosts(tileIndex)" :key="postIndex">
-            <article class="tile card profile-card is-child is-primary" v-if="tileIndex === 1 && postIndex === 0">
-              <div class="card-image">
-                <figure class="image is-3by1">
-                  <img src="css/images/new_twitter_banner.png" alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img class="is-round" src="https://pbs.twimg.com/profile_images/874621384739213313/pukNYO7W_400x400.jpg" alt="Placeholder image">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4">Kudakwashe Paradzayi</p>
-                    <p class="subtitle is-6">@kudapara</p>
-                  </div>
-                </div>
-                
-                <div class="content">
-                  <p>I love coding and art!</p>
-                  <a class="button is-primary is-outlined" href="https://twitter.com/kudapara" target="_blank">twitter</a>
-                  <a class="button is-success is-outlined" href="https://github.com/kudapara" target="_blank">github</a>
-                </div>
-            </article>
+  <header>
+    <nav>
+      <a href="#">
+        <h3>Kudakwashe Paradzayi</h3>
+        <label id="description">Fullstack Developer</label>
+      </a>
+      <a href="https://kudapara.co.zw/blog" id="navLink">Blog</a>
+      <a href="" style="visibility: hidden"><img src="images/nav_icon.png" alt="nav icon"></a>
+    </nav>
 
-            <article v-else class="tile is-child card post-card is-info">
-              <div class="card-image">
-                <figure class="image is-16by9">
-                  <img :src="post.imageUrl" alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="card-content">                
-                <div class="content">
-                  <a :href="post.url"><h3 class="title">{{post.title}}</h3></a>
-                  
-                  <p>{{post.description}}</p>
-                  <a v-for="tag in post.tags" :key="tag" __target="blank" class="tag-link" :href="`http://kudapara.co.zw/blog/tags#tag-${tag}`">#{{tag}} </a>
-                  <br>
-                  <br>
-                  <time :datetime="post.postedOn">{{post.postedOn}}</time>
-                </div>  
-              </div>
-            </article>
-          </div>
+    <h1> I am a creative fullstack developer and I get the job done.</h1>
+    <a href="contact.html" class="btnFilled">Get in touch</a>
+  </header>
+
+  <div class="team">
+    <h1>Some of my skills</h1>
+    <div class="members">
+      <div class="person"><img height="100px" src="images/skill-html.svg" alt="david">
+        <br> <label>&ltHTML/&gt</label>
+      </div>
+      <div class="person"><img height="100px" src="images/skill-javascript.svg" alt="david">
+        <br> <label>javascript();</h3>
+      </div>
+      <div class="person"><img height="100px" src="images/skill-css.svg" alt="david">
+        <br> <label>#css</label>
+      </div>
+      <div class="person"><img height="100px" src="images/skill-vue.svg" alt="david">
+        <br> <label>{{ vue.js }}</label>
+      </div>
+    </div>
+    <div class="members">
+        <div class="person"><img height="100px" src="images/skill-mongo.svg" alt="david">
+         <br> <label>{ mongodb }</label>
+        </div>
+        <div class="person"><img height="100px" src="images/skill-node.svg" alt="david">
+          <br> <label>nodejs();</label>
+        </div>
+        <div class="person"><img height="100px" src="images/skill-express.svg" alt="david">
+          <br> <label>express.js();</label>
+        </div>
+        <div class="person"><img height="100px" src="images/skill-dotnet.svg" alt="david">
+          <br> <label> .NET </label>
         </div>
       </div>
-    </section>
+      <div class="members">
+        <a href="https://github.com/kudapara?tab=repositories" class="btnOutline">See more</a>
+      </div>
   </div>
+<!--
+  
+  <div class="about">
+    <h1>I have worked on these few projects</h1>
+    <div class="icons">
+      <img src="images/xd_icon.png" alt=""><img src="images/sketch_icon.png" alt="">
+    </div>
+  </div>
+-->
+  <div class="recentBlogs">
+    <h1>Recent Posts</h1>
+    <div class="posts">
+      <div class="post">
+        <img width="100%" src="https://pbs.twimg.com/card_img/989476255849476097/47ALa303?format=jpg&name=600x314" alt="">
+        <div class="postContent">
+        <h4>Is your codebase rock solid</h4>
+        <p>
+                Anyone can write code, but to write quality code that scales requires one to apply disciplined practices.
+              </p>
+              <p>
+                As software developers our ultimate goal is to create software that is...
+              </p>
+        </div>
+        <a class="btnFlat" href="https://kudapara.co.zw/blog/2018/04/18/Is-your-codebase-rock-SOLID/">Read more</a>
+      </div>
+      
+      <div class="post">
+        <img width="100%" src="https://pbs.twimg.com/card_img/989476255849476097/47ALa303?format=jpg&name=600x314" alt="">
+        <div class="postContent">
+        <h4>Introducting the blog</h4>
+        <p>
+            I was introduced to programming in 2014 and ever since then I have been in love with programming.
+            All these years I have gained some experience, some of which I will share in my next blogs.
+        </p>
+        </div>
+        <a class="btnFlat" href="https://kudapara.co.zw/blog/2018/04/18/Is-your-codebase-rock-SOLID/">Read more</a>
+      </div>
+      <div class="fullWidth">
+          <a href="https://kudapara.co.zw/blog" class="btnOutline">See more posts</a>
+      </div>
+    </div>
+        
+  </div>
+  <div class="callToAction">
+    <h1>Let's connect</h1>
+    <a href="https://twitter.com/intent/user?screen_name=kudapara" class="btnFilled">Follow me on twitter</a>
+  </div>
+  
+  <footer>
+    <p>
+      &copy Kudakwashe Paradzayi 2018
+    </p>
+    <div class="footerPages">
+      <a href="https://twitter.com/kudapara">Twitter</a>
+      <a href="https://github.com/kudapara">Github</a>
+      <a href="https://medium.com/@kudapara">Medium</a>
+    </div>
+  </footer>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
-
-<script>
-  var vm = new Vue({
-    el: '#app',
-    mounted () {
-      this.mountBurgerActions()
-    },
-    data: {
-      posts: [
-        {
-          url: 'http://kudapara.co.zw/blog/2018/04/18/Is-your-codebase-rock-SOLID/',
-          imageUrl: 'https://pbs.twimg.com/card_img/989476255849476097/47ALa303?format=jpg&name=600x314',
-          title: 'Is your codebase rock SOLID',
-          description: 'Anyone can write code, but to write quality code that scales requires one to apply disciplined practices. As software developers our ultimate goal is to create software that is...',
-          postedOn: '18 April 2018',
-          tags: ['Clean Code', 'SOLID Principles']
-        },
-        {
-          url: 'https://kudapara.co.zw/blog/2018/03/28/Introducing-the-blog/',
-          imageUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTIiIGhlaWdodD0iMTUyIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2IoMTM2LDExMCw3MSkiPjwvcmVjdD48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjUuNDYxLC0yNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI3LjMwNDk5OTk5OTk5OTk5LC0yNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1LjQ2MSwxMjcuMzA0OTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI3LjMwNDk5OTk5OTk5OTk5LDEyNy4zMDQ5OTk5OTk5OTk5OCkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA3MjAwMDAwMDAwMDAwMDAxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0xMi43MzA1KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMDcyMDAwMDAwMDAwMDAwMDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMTQwLjAzNTQ5OTk5OTk5OTk4KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjQ2MSwtMjUuNDYxKSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjQ2MSwxMjcuMzA0OTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4wOTgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLjkyMiwtMTIuNzMwNSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjA5OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAuOTIyLDE0MC4wMzU0OTk5OTk5OTk5OCkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjA0NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzYuMzgzLC0yNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4wNDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc2LjM4MywxMjcuMzA0OTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAxLjg0NCwtMTIuNzMwNSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDEuODQ0LDE0MC4wMzU0OTk5OTk5OTk5OCkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjAzNzMzMzMzMzMzMzMzMzMzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjUuNDYxLDApIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wMzczMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI3LjMwNDk5OTk5OTk5OTk5LDApIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4wMjg2NjY2NjY2NjY2NjY2NjciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMTIuNzMwNSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjE0MTMzMzMzMzMzMzMzMzM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNS40NjEsMCkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC45MjIsMTIuNzMwNSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3Ni4zODMsMCkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjA2MzMzMzMzMzMzMzMzMzM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDEuODQ0LDEyLjczMDUpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1LjQ2MSwyNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI3LjMwNDk5OTk5OTk5OTk5LDI1LjQ2MSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA1NDY2NjY2NjY2NjY2NjY3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDM4LjE5MTQ5OTk5OTk5OTk5KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjQ2MSwyNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wNzIwMDAwMDAwMDAwMDAwMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAuOTIyLDM4LjE5MTQ5OTk5OTk5OTk5KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTE1MzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc2LjM4MywyNS40NjEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4xMTUzMzMzMzMzMzMzMzMzNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAxLjg0NCwzOC4xOTE0OTk5OTk5OTk5OSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjAyODY2NjY2NjY2NjY2NjY2NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1LjQ2MSw1MC45MjIpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4wMjg2NjY2NjY2NjY2NjY2NjciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNy4zMDQ5OTk5OTk5OTk5OSw1MC45MjIpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCw2My42NTI0OTk5OTk5OTk5OSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjA0NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuNDYxLDUwLjkyMikgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA3MjAwMDAwMDAwMDAwMDAxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC45MjIsNjMuNjUyNDk5OTk5OTk5OTkpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzYuMzgzLDUwLjkyMikgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDEuODQ0LDYzLjY1MjQ5OTk5OTk5OTk5KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTE1MzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNS40NjEsNzYuMzgyOTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4xMTUzMzMzMzMzMzMzMzMzNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI3LjMwNDk5OTk5OTk5OTk5LDc2LjM4Mjk5OTk5OTk5OTk4KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMDI4NjY2NjY2NjY2NjY2NjY3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDg5LjExMzQ5OTk5OTk5OTk5KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMDk4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNS40NjEsNzYuMzgyOTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4wMzczMzMzMzMzMzMzMzMzMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAuOTIyLDg5LjExMzQ5OTk5OTk5OTk5KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMDI4NjY2NjY2NjY2NjY2NjY3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3Ni4zODMsNzYuMzgyOTk5OTk5OTk5OTgpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4xNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAxLjg0NCw4OS4xMTM0OTk5OTk5OTk5OSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjUuNDYxLDEwMS44NDQwMDAwMDAwMDAwMSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjcuMzA0OTk5OTk5OTk5OTksMTAxLjg0NDAwMDAwMDAwMDAxKSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNS40NjEsLTUwLjkyMTk5OTk5OTk5OTk3KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMDM3MzMzMzMzMzMzMzMzMzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMTE0LjU3NDUwMDAwMDAwMDAxKSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMDM3MzMzMzMzMzMzMzMzMzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsLTM4LjE5MTQ5OTk5OTk5OTk2KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjQ2MSwxMDEuODQ0MDAwMDAwMDAwMDEpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iI2RkZCIgb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuNDYxLC01MC45MjE5OTk5OTk5OTk5Nykgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjZGRkIiBvcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC45MjIsMTE0LjU3NDUwMDAwMDAwMDAxKSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiNkZGQiIG9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLjkyMiwtMzguMTkxNDk5OTk5OTk5OTYpIHJvdGF0ZSg0NSwyNS40NjEsMjUuNDYxKSI+PHJlY3QgeD0iMTgiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI1NCI+PC9yZWN0PjxyZWN0IHg9IjAiIHk9IjE4IiB3aWR0aD0iNTQiIGhlaWdodD0iMTgiPjwvcmVjdD48L2c+PGcgZmlsbD0iIzIyMiIgb3BhY2l0eT0iMC4wNjMzMzMzMzMzMzMzMzMzNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzYuMzgzLDEwMS44NDQwMDAwMDAwMDAwMSkgcm90YXRlKDQ1LDI1LjQ2MSwyNS40NjEpIj48cmVjdCB4PSIxOCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjU0Ij48L3JlY3Q+PHJlY3QgeD0iMCIgeT0iMTgiIHdpZHRoPSI1NCIgaGVpZ2h0PSIxOCI+PC9yZWN0PjwvZz48ZyBmaWxsPSIjMjIyIiBvcGFjaXR5PSIwLjA2MzMzMzMzMzMzMzMzMzM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3Ni4zODMsLTUwLjkyMTk5OTk5OTk5OTk3KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTE1MzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMS44NDQsMTE0LjU3NDUwMDAwMDAwMDAxKSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjxnIGZpbGw9IiMyMjIiIG9wYWNpdHk9IjAuMTE1MzMzMzMzMzMzMzMzMzQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMS44NDQsLTM4LjE5MTQ5OTk5OTk5OTk2KSByb3RhdGUoNDUsMjUuNDYxLDI1LjQ2MSkiPjxyZWN0IHg9IjE4IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iNTQiPjwvcmVjdD48cmVjdCB4PSIwIiB5PSIxOCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjE4Ij48L3JlY3Q+PC9nPjwvc3ZnPg==',
-          title: 'Introducing the blog',
-          description: 'I was introduced to programming in 2014 and ever since then I have been in love with programming. All these years I have gained some experience, some of which I will share in my next blogs.',
-          postedOn: '23 March 2018',
-          tags: ['about me', 'kudakwashe']
-        }
-      ]
-    },
-    methods: {
-      filterPosts (tileIndex, postIndex) {
-        // allow pass for the profile card
-        if (tileIndex === 1 && postIndex === 0) return true
-
-        if (tileIndex === 1) return postIndex % 3 === 2
-        if (tileIndex === 2) return postIndex % 3 === 0
-        if (tileIndex === 3) return postIndex % 3 === 1
-      },
-      filteredPosts (tileIndex) {
-        return this.posts.filter((post, postIndex) => this.filterPosts(tileIndex, postIndex))
-      },
-      mountBurgerActions () {
-        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
-
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-
-          // Add a click event on each of them
-          $navbarBurgers.forEach(function ($el) {
-            $el.addEventListener('click', function () {
-
-              // Get the target from the "data-target" attribute
-              var target = $el.dataset.target
-              var $target = document.getElementById(target)
-
-              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-              $el.classList.toggle('is-active')
-              $target.classList.toggle('is-active')
-
-            })
-          })
-        }
-      }
-    }
-  })
-</script>
 </html>
