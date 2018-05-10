@@ -352,4 +352,14 @@ footer p, footerPages {
       display: table;
       clear: both;
   }
+
+  footer {
+    text-align: center;
+  }
+  footer p {
+    margin-bottom: 20px;
+  }
+  .footerPages {
+    margin-right: 18%;
+  }
 }
