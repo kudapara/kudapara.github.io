@@ -106,6 +106,12 @@ nav a #description {
   margin-top: 0px
 }
 
+#navLink {
+  display: block;
+  border-bottom: 5px #fff solid;
+  color: white;
+  float: right
+}
 
 /*---------- header ------------*/
 header {
@@ -224,7 +230,7 @@ header h1 {
 /**---------------calto action------------------*/
 .callToAction {
   text-align: center;
-  padding: 20em 5% 20em 5%;
+  padding: 10em 5% 10em 5%;
   background-image: url(images/background_calltoaction.png);
   background-repeat: no-repeat;
   background-position: center;
