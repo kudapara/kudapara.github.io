@@ -267,6 +267,10 @@ footer p, footerPages {
 
 /*----------------------- Responsive ---------------*/
 @media only screen and (max-width: 1000px) {
+  #navLink {
+    border-bottom: 5px #2b9dff solid;
+    color: #2b9dff;
+  }
   header {
     height: 1600px;
     min-height: 1600px;
