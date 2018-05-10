@@ -23,6 +23,7 @@ h1 {
 }
 h3 {
   font-size: 24px;
+  font-weight: lighter
 }
 
 p {
@@ -178,22 +179,30 @@ person h3 {
 
 /*------------------- Recent blog posts ---------------------------------*/
 .recentBlogs {
+  margin-top: 140px;
+  text-align: center
+}
+
+.posts {
+  margin-top: 30px;
   text-align: center;
   padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap
 }
-recentBlogs h4 {
+.recentBlogs h4 {
   color: #2b9dff;
   margin-bottom: 15px;
 }
 
 .post {
   width: 25%;
+  background: #e5ebf015;
   padding: 5px;
+  margin: 10px;
   border-radius: 3px;
-  box-shadow: 0.5px 0.5px 3px 0.5px rgba(128, 128, 128, 0.301)
+  box-shadow: 2px 1px 3px 0.5px rgba(128, 128, 128, 0.301)
 }
 /**---------------calto action------------------*/
 .callToAction {
