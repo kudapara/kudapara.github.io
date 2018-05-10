@@ -78,8 +78,9 @@ p {
 }
 /*---------NAV--------*/
 nav {
-  line-height: 150px;
+  line-height: 50px;
   text-align: right;
+  margin-bottom: 100px;
 }
 nav a {
   text-decoration: none;
@@ -96,13 +97,13 @@ nav a img {
   vertical-align: middle
 }
 
-nav a span {
-  background: #2b9dff;
+nav a #description {
+  color: #8bb5da;
   padding: 5px 15px;
+  border: #8bb5da 1px solid;
   border-radius: 1000px;
   font-weight: 100;
-  color: white;
-  margin-left: 7px;
+  margin-top: 0px
 }
 
 
@@ -112,6 +113,7 @@ header {
   min-height: 1000px;
   padding: 0 5%;
   background-image: url(images/background_header.png);
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
@@ -125,7 +127,7 @@ header h1 {
 /*-------------team --------------------*/
 .team {
   text-align: center;
-  margin: 10em 0 3em 0;
+  margin: 5em 0 3em 0;
   padding: 0 5%;
   background-image: url(images/background_team.png);
   background-repeat: no-repeat;
@@ -183,29 +185,33 @@ header h1 {
 /*------------------- Recent blog posts ---------------------------------*/
 .recentBlogs {
   margin-top: 140px;
-  text-align: center
+  text-align: center;
 }
 
 .posts {
   margin-top: 30px;
-  text-align: center;
+  text-align: left;
   padding: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap
 }
 .recentBlogs h4 {
-  color: #2b9dff;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .post {
   flex: 30%;
+  max-width: 380px;
   background: #e5ebf015;
-  padding: 5px;
   margin: 10px;
   border-radius: 3px;
-  box-shadow: 2px 1px 3px 0.5px rgba(128, 128, 128, 0.301)
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.postContent {
+  padding: 15px 15px 0 15px;
 }
 
 .fullWidth {
@@ -258,7 +264,6 @@ footer p, footerPages {
   header {
     height: 1600px;
     min-height: 1600px;
-    padding: 0 5% 200px;
     background-image: url(images/mobile_background_header.png);
     background-repeat: no-repeat;
     background-size: contain;
