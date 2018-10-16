@@ -161,3 +161,41 @@ p {
 
 .text-center { text-align: center }
 .no-decoration { text-decoration: none }
+
+/* Animations */
+  .animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    25% {
+      -webkit-transform: translateY(-2px);
+    }
+    50% {
+      -webkit-transform: translateY(-4px);
+    }
+    75% {
+      -webkit-transform: translateY(-2px);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }
