@@ -116,6 +116,12 @@ p {
   color: currentColor;
   display: inline-block;
   text-align: center;
+  transition: box-shadow, transform .2s;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.08);
 }
 
 .btn-patreon {
