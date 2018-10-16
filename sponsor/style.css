@@ -1,0 +1,157 @@
+/*----------Blobal --------*/
+:root {
+  --color-purple: #AB02CB;
+  --color-pink: #CB0274;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(48, 42, 75);
+  line-height: 1.4
+}
+
+body {
+  min-height: 99vh;
+  border-bottom: 1vh purple solid;
+}
+
+.sponsor-header {
+  padding: 40px 0;
+  background: linear-gradient(45deg, var(--color-purple), var(--color-pink));
+  color: white;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.sponsor-header__btn {
+  text-decoration: none;
+  color: currentColor;
+  padding: 5px 20px;
+  border: 3px white solid;
+  border-radius: 1000px;
+  transition: background transform .3s;
+}
+
+.sponsor-header__btn:hover {
+  background: #fff;
+  color: var(--color-purple);
+  transform: scale(12)
+}
+
+.sponsor-header__title {
+  font-size: 40px;
+  font-weight: 900
+}
+
+.sponsor-header__dynamic-text {
+  border-bottom: 2px orange solid;  
+}
+
+.sponsor-header__avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 40px;
+  background: white;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.sponsor-header__avatar > img {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Payment methods */
+.patreon, .paynow {
+  flex: 1;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: normal
+}
+p {
+  margin-bottom: 1rem
+}
+
+
+.three-dots > span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+}
+
+.three-dots > span:not(:last-child) {
+  margin-right: 5px;
+}
+
+.footer__link {
+  color: currentColor;
+  margin-right: 5px;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+/* Components */
+.btn {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: currentColor;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-patreon {
+  color: white;
+  background: #FF4211;
+  width: 100%;
+}
+
+.btn-paynow {
+  color: white;
+  background: #8811FF;
+  width: 100%;
+}
+
+.btn-twitter {
+  color: white;
+  background: #8811FF;
+  border-radius: 1000px;
+}
+/* Utlitities */
+.flex { display: flex }
+.items-center { align-items: center }
+.justify-between { justify-content: space-between }
+.justify-center { justify-content: center }
+.mb-4 { margin-bottom: 1rem }
+.mb-8 { margin-bottom: 2rem }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.pl-4 { padding-left: 1rem }
+.pr-4 { padding-right: 1rem }
+
+.text-center { text-align: center }
+.no-decoration { text-decoration: none }
