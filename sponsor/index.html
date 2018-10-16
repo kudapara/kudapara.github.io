@@ -37,9 +37,15 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea excepturi tenetur quidem!
         </p>
         <div class="paynow-form collapsed">
-          
+          <input type="email" class="paynow-form__text-input mb-4" placeholder = "Enter your email address">
+          <input type="number" value="5" class="paynow-form__text-input mb-4" placeholder="Enter the amount you want to donate">
+          <input type="checkbox" id="mobile-money-btn"> <label for="mobile-money-btn">Use mobile money (Ecocash. OneMoney)</label>
+
+          <div class="paynow-form__mobile-money collapsed">
+            <input type="text" class="paynow-form__text-input" placeholder = "Enter your phone number">
+          </div>
         </div>
-        <a href="#" class="btn btn-paynow mb-4">Choose Paynow</a>
+        <a id="paynow-btn" href="#" class="btn btn-paynow mb-4">Choose Paynow</a>
         <img src="../assets/images/payment-methods.svg" alt="">
       </div>
     </div>
@@ -87,6 +93,20 @@
   </footer>
 </body>
 
+<script>
+  // var $ = 
+  var paynowButton = document.querySelector('#paynow-btn')
+  paynowButton.addEventListener('click', function () {
+    document.querySelector('.paynow-form').classList.toggle('collapsed')
+    paynowButton.innerHTML = document.querySelector('.paynow-form').classList.contains('collapsed') ? 'Choose Paynow' : 'Pay Now'
+  })
+
+  var mobileMoneyCheckBox = document.querySelector('#mobile-money-btn')
+  mobileMoneyCheckBox.addEventListener('change', function () {
+    document.querySelector('.paynow-form__mobile-money').classList.toggle('collapsed')
+
+  })
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script>

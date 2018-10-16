@@ -80,6 +80,27 @@ body {
   flex: 1;
 }
 
+.paynow-form, .paynow-form__mobile-money {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+
+.paynow-form.collapsed, .paynow-form.collapsed *,
+.paynow-form__mobile-money.collapsed, .paynow-form__mobile-money.collapsed * {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.paynow-form__text-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px gray solid;
+}
 h3 {
   font-size: 25px;
   font-weight: normal
