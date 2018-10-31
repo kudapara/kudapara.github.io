@@ -1,0 +1,11 @@
+{
+  "data": [
+    {
+      "type": "blog",
+      "title": "Is your codebase rock SOLID?",
+      "url": "https://medium.com/@kudapara/is-your-codebase-rock-solid-fd08563a52f3",
+      "image_url": "https://cdn-images-1.medium.com/max/2000/1*39Rq54oxuBJIKw_4aZubSQ.png",
+      "description": "Anyone can write code, but to write quality code that scales requires one to apply disciplined practices. As software developers our ultimate goal is to create software that is..."
+    }
+  ]
+}
