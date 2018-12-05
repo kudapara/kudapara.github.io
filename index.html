@@ -14,120 +14,334 @@
   <meta property="og:image:width" content="1350">
   <meta property="og:url" content="https://kudapara.co.zw">
   <meta property="og:description" content="I love coding and art">
-  <link rel="shortcut icon" href="images/logo.png">
+  <link rel="shortcut icon" href="assets/images/logo.png">
   <script src="ga.js"></script>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/css/tailwind-raw.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <title>Kudakwashe Paradzayi</title>
+  <style>
+    html {
+      font-family: montserrat, Candara, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: url(assets/images/code-background.svg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 700px;
+    }
+
+    .my-social-link {
+      transform: rotate(-30deg) skew(25deg);
+    }
+
+    .my-social-link span {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .my-social-link:hover {
+      cursor: pointer;
+    }
+
+    /* Hovers */
+    .my-social-link:hover span:nth-child(5) {
+      transform: translate(20px, -20px);
+      opacity: 1
+    }
+
+    .my-social-link:hover span:nth-child(4) {
+      transform: translate(15px, -15px);
+      opacity: .8
+    }
+
+    .my-social-link:hover span:nth-child(3) {
+      transform: translate(10px, -10px);
+      opacity: .6
+    }
+
+    .my-social-link:hover span:nth-child(2) {
+      transform: translate(5px, -5px);
+      opacity: .4
+    }
+
+    .my-social-link:hover span:nth-child(1) {
+      transform: translate(0, 0);
+      opacity: .2
+    }
+
+    /* Click simulate a downpress*/
+    .my-social-link:active span:nth-child(5) {
+      transform: translate(10px, -10px);
+      opacity: 1
+    }
+
+    .my-social-link:active span:nth-child(4) {
+      transform: translate(7.5px, -7.5px);
+      opacity: .8
+    }
+
+    .my-social-link:active span:nth-child(3) {
+      transform: translate(5px, -5px);
+      opacity: .6
+    }
+
+    .my-social-link:active span:nth-child(2) {
+      transform: translate(2.5px, -2.5px);
+      opacity: .4
+    }
+
+    .my-social-link:active span:nth-child(1) {
+      transform: translate(0, 0);
+      opacity: .2
+    }
+
+    /* Color the social links */
+    .my-social-link:nth-child(1) span {
+      background: #55acee;     
+    }
+    
+    .my-social-link:nth-child(2) span {
+      background: #3b5999;      
+    }
+
+    .my-social-link:nth-child(3) span {
+      background: rgb(15, 15, 15);   
+   }
+
+    .my-social-link:nth-child(4) span {
+      background: rgb(15, 15, 15);     
+    }
+
+  </style>
   </head>
-<body>
-  <div style="padding: 20px; background: #9638ff; color: #fff; text-align: center; margin-bottom: 10px;">
-    I am doing a complete redesign of this website. Watch the space.
-  </div>
-  <header>
-    <nav>
-      <a href="#">
-        <h3>Kudakwashe Paradzayi</h3>
-        <label id="description">Fullstack Developer</label>
-      </a>
-      <a href="https://kudapara.co.zw/blog" id="navLink">Blog</a>
-      <a href="" style="visibility: hidden"><img src="images/nav_icon.png" alt="nav icon"></a>
-    </nav>
+<body class="pb-10 pt-4 text-grey-darker border-t-2 border-purple px-4">
+  <!-- The wrapper for the whole body -->
+  <div class="container mx-auto">
 
-    <h1> I am a creative fullstack developer and I get the job done.</h1>
-    <a href="contact.html" class="btnFilled">Get in touch</a>
-  </header>
+    <!-- Links to jump to specific parts of the page -->
+    <nav class=" mb-10 block">
+      <div class="list-reset flex justify-between flex-wrap">
+        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex justify-between">
+            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Apps 📱</a>
+            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Blog 📓</a>
+            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Youtube 📹</a>
+            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Design 🎨</a>
+        </div>
+        <span class="flex-1 sm:hidden">&nbsp;</span> <!-- This is a hack to right align the subscribe button to the right-->
+        <a class="inline-flex items-center  py-2 px-4 bg-orange-light text-white rounded shadow no-underline hover:bg-orange justify-end" target="_blank" href="https://www.buymeacoffee.com/kudapara"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+      </div>
+    </nav> <!-- End of Links to jump to specific parts of the page -->
 
-  <div class="team">
-    <h1>Some of my skills</h1>
-    <div class="members">
-      <div class="person"><img height="100px" src="images/skill-html.svg" alt="david">
-        <br> <label>&ltHTML/&gt</label>
-      </div>
-      <div class="person"><img height="100px" src="images/skill-javascript.svg" alt="david">
-        <br> <label>javascript();</h3>
-      </div>
-      <div class="person"><img height="100px" src="images/skill-css.svg" alt="david">
-        <br> <label>#css</label>
-      </div>
-      <div class="person"><img height="100px" src="images/skill-vue.svg" alt="david">
-        <br> <label>{{ vue.js }}</label>
-      </div>
-    </div>
-    <div class="members">
-        <div class="person"><img height="100px" src="images/skill-mongo.svg" alt="david">
-         <br> <label>{ mongodb }</label>
-        </div>
-        <div class="person"><img height="100px" src="images/skill-node.svg" alt="david">
-          <br> <label>nodejs();</label>
-        </div>
-        <div class="person"><img height="100px" src="images/skill-express.svg" alt="david">
-          <br> <label>express.js();</label>
-        </div>
-        <div class="person"><img height="100px" src="images/skill-dotnet.svg" alt="david">
-          <br> <label> .NET </label>
-        </div>
-      </div>
-      <div class="members">
-        <a href="https://github.com/kudapara?tab=repositories" class="btnOutline">See more</a>
-      </div>
-  </div>
-<!--
-  
-  <div class="about">
-    <h1>I have worked on these few projects</h1>
-    <div class="icons">
-      <img src="images/xd_icon.png" alt=""><img src="images/sketch_icon.png" alt="">
-    </div>
-  </div>
--->
-  <div class="recentBlogs">
-    <h1>Recent Posts</h1>
-    <div class="posts">
-      <div class="post">
-        <img width="100%" src="https://pbs.twimg.com/card_img/989476255849476097/47ALa303?format=jpg&name=600x314" alt="">
-        <div class="postContent">
-        <h4>Is your codebase rock solid</h4>
-        <p>
-                Anyone can write code, but to write quality code that scales requires one to apply disciplined practices.
-              </p>
-              <p>
-                As software developers our ultimate goal is to create software that is...
-              </p>
-        </div>
-        <a class="btnFlat" href="https://kudapara.co.zw/blog/2018/04/18/Is-your-codebase-rock-SOLID/">Read more</a>
-      </div>
+
+    <!-- The hero section, where I introduce myself briefly -->
+    <section class="flex flex-col items-center mb-32">
+      <img src="assets/images/kuda_face.svg" style="height:280px;" class="mx-auto mb-8" alt="">
+      <!-- in place of the illustration, delete soon -->
+
+      <h3 class="text-2xl md:text-3xl mb-10">👋 Hi, I am Kuda</h3>
+      <p class="w-4/5 text-center mb-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tenetur quis. Inventore corrupti cupiditate eaque velit architecto consectetur quod eligendi?</p>
       
-      <div class="post">
-        <img width="100%" src="https://pbs.twimg.com/card_img/989476255849476097/47ALa303?format=jpg&name=600x314" alt="">
-        <div class="postContent">
-        <h4>Introducting the blog</h4>
-        <p>
-            I was introduced to programming in 2014 and ever since then I have been in love with programming.
-            All these years I have gained some experience, some of which I will share in my next blogs.
-        </p>
-        </div>
-        <a class="btnFlat" href="https://kudapara.co.zw/blog/2018/03/28/Introducing-the-blog/">Read more</a>
-      </div>
-      <div class="fullWidth">
-          <a href="https://kudapara.co.zw/blog" class="btnOutline">See more posts</a>
-      </div>
-    </div>
-        
-  </div>
-  <div class="callToAction">
-    <h1>Let's connect</h1>
-    <a href="https://twitter.com/intent/user?screen_name=kudapara" class="btnFilled">Follow me on twitter</a>
-  </div>
+      <!-- Send me email-->
+      <a href="mailto:kgparadzayi@gmail.com" class="w-full md:w-auto mb-12 md:mb-0 text-center py-4 px-4 sm:px-10 bg-purple text-white rounded shadow-md no-underline hover:bg-purple-dark">Send me an email ✉️</a>
   
-  <footer>
-    <p>
-      &copy Kudakwashe Paradzayi 2018
-    </p>
-    <div class="footerPages">
-      <a href="https://twitter.com/kudapara">Twitter</a>
-      <a href="https://github.com/kudapara">Github</a>
-      <a href="https://medium.com/@kudapara">Medium</a>
-    </div>
-  </footer>
+    </section> <!-- End of hero section-->  
+
+    <!-- Start of the projects I am working on -->
+    <section class="mb-32">
+      <h3 class=" text-2xl md:text-3xl text-center mb-10">and lately I have been working on these projects 💻</h3>
+    
+      <!-- project 1 -->
+      <div class="flex row sm:flex-row-reverse justify-between flex-wrap sm:flex-nowrap mb-10">
+      
+        <!-- Image part -->
+        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 ml-0 sm:ml-10 flex flex-col justify-between items-end">
+          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
+          <span class="bg-pink-lightest text-pink-darkest p-2 rounded">💰 $40/month</span>
+        </div>
+        <!--End of image part-->
+      
+        <!-- Description part -->
+        <div class="sm:flex-1 flex flex-col justify-between">
+          <div>
+            <h4 class="flex items-center mb-4">
+              <span class="inline-block h-10 w-10 bg-pink rounded mr-2">&nbsp;</span>
+              <span>School Metrics</span>
+            </h4>
+      
+            <p class="mb-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis dicta aliquid,
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+
+            <p class="mb-4"> Deserunt quas expedita harum. commodi iste
+                consectetur, unde inventore, esse fugiat repellendus id perferendis necessitatibus. Ipsum, facere. Eos
+                perferendis cum ut alias!</p>
+          </div>
+          <button class="w-full py-4 px-6 bg-purple text-white rounded shadow">Visit the app 📂</button>
+        </div>
+        <!--End of description-->
+      </div>
+      <!--End of project 1-->
+
+
+      <!-- project 2 -->
+      <div class="flex justify-between items-stretch flex-wrap sm:flex-nowrap mb-10">
+        
+        <!-- Image part -->
+        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 mr-0 sm:mr-10 flex flex-col justify-between items-start">
+          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
+          <span class="bg-pink-lightest text-pink-darkest p-2 rounded">💰 Free</span>
+        </div> <!--End of image part-->
+
+        <!-- Description part -->
+        <div class="sm:flex-1 flex flex-col justify-between">
+          <div>
+            <h4 class="flex items-center mb-4">
+              <span class="inline-block h-10 w-10 bg-pink rounded mr-2">&nbsp;</span>
+              <span>Vault</span>
+            </h4>
+
+            <p class="mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis dicta aliquid,
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              </p>
+  
+              <p class="mb-4"> Deserunt quas expedita harum. commodi iste
+                  consectetur, unde inventore, esse fugiat repellendus id perferendis necessitatibus. Ipsum, facere. Eos
+                  perferendis cum ut alias!</p>
+          </div>
+          <button class="w-full py-4 px-6 bg-purple text-white rounded shadow">Download for windows ☁️👇</button>
+        </div> <!--End of description-->
+      </div> <!--End of project 2-->
+      
+      <a href="#" class="py-2 mr-2 px-4 text-grey-darker no-underline border-b-2  text-purple-dark border-pink">👀 Checkout more of my projects 👉</a>
+    </section> <!-- End of the projects i am working on-->
+
+    <!-- Start of blog posts -->
+    <section class="mb-32">
+      <h3 class=" text-2xl md:text-3xl text-center mb-10">✍ sometimes I write my thoughts and opinions down</h3>
+      <ul class="list-reset mb-10">
+        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">15. Dynamically reload a vue project using Netlify</a></li>
+        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">14. Why I hate windows so much</a></li>
+        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">13. Inscape outperfoms Illustrator, by far</a></li>
+      </ul>
+
+      <a href="#" class="py-2 mr-2 px-4 text-grey-darker no-underline border-b-2  text-purple-dark border-pink">👀 Read more of my posts 👉</a>
+    </section><!-- End of blog posts -->
+
+    <!-- Start of youtube -->
+    <section class="mb-32">
+      <h3 class=" text-2xl md:text-3xl text-center mb-10">whilst sometimes I talk to my computer while recording the screen 😺📹</h3>
+
+      <div class="bg-grey-light flex justify-center items-center h-64 mb-4 rounded-t">
+        <span class="text-2xl">&RightTriangle;</span>
+      </div>
+
+      <h4 class="flex justify-between w-full flex-wrap sm:flex-nowrap mb-4">
+        <span class="w-full sm:w-auto mb-2 sm:mb-0">Vectorizing your avatar with inkscape </span>
+        <span class="text-grey">4 days ago</span>
+      </h4>
+      
+      <div class="flex justify-between sm:justify-end">
+        <button
+          class="py-2 px-4 bg-purple-lightest border border-purple text-purple-dark rounded no-underline mr-4 hover:bg-purple-light hover:shadow hover:text-purple-lightest">
+          &RightTriangle; Watch on Youtube</button>
+        <button class="py-2 px-4 bg-red text-white rounded shadow no-underline hover:bg-red-dark hover:shadow-md">Subscribe</button>
+      </div>
+    </section>
+    <!-- End of youtube -->
+
+    <!-- Start of designer work -->
+    <section class="mb-32">
+      <h3 class=" text-2xl md:text-3xl text-center mb-10">and oh I am a designer 🎨 too 🙈</h3>
+      <div class="sm:flex mb-8">
+        <div class="flex-1 sm:mr-4 mb-4 sm:mb-0">
+          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
+          <h4>Cat and mouse Illustration</h4>
+        </div>
+
+        <div class="flex-1 sm:mr-4 mb-4 sm:mb-0">
+          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
+          <h4>Pizza app UI design</h4>
+        </div>
+
+        <div class="flex-1 mb-4 sm:mb-0">
+          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
+          <h4>Krita brushes, photorealism</h4>
+        </div>
+      </div>
+
+      <a href="#" class="py-2 mr-2 px-4 text-grey-darker no-underline border-b-2  text-purple-dark border-pink">👀 Explore more of my design 👉</a>
+    </section> <!--End of designer work-->
+
+    <!-- Start of the social network-->
+    <section class="mb-32">
+      <h3 class="text-2xl md:text-3xl text-center mb-10">from anywhere in the world we can connect 👫</h3>
+      <p class="mb-12 text-center">just look for me at my virtual homes 👇</p>
+
+      <ul class="w-4/5 mx-auto md:w-3/5  list-reset flex justify-between">
+        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
+          <span></span> <span></span> <span></span> <span></span> <span>t</span>
+        </li>
+        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
+          <span></span> <span></span> <span></span> <span></span> <span>f</span>
+        </li>
+        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
+          <span></span> <span></span> <span></span> <span></span> <span>m</span>
+        </li>
+        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white rounded">
+          <span></span> <span></span> <span></span> <span></span> <span>g</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Start of newsletter work -->
+    <section class="mb-32">
+      <h3 class="text-2xl md:text-3xl text-center mb-10">Now that you have seen a glimpse of who I am and what I do 😎</h3>
+
+      <p class="sm:w-4/5 mx-auto mb-10">I send out a weekly digest every Thursday of the my work for the week and also some sick picks that I find interesting.
+        No span, I promise ✌️</p>
+
+      <h4 class="mb-4 text-center">Subscribe to my newsletter 📰</h4>
+     <div class="bg-pink py-6 -mx-4 px-4 rounded">
+        <div class="flex w-full sm:w-3/5 sm:mx-auto flex-wrap md:flex-nowrap">
+          <input type="email" name="" id="" class="w-full md:w-auto md:flex-1 mb-4 md:mb-0 py-4 px-4 bg-white rounded md:rounded-l shadow-lg">
+          <button class="w-full md:w-auto py-4 px-4 bg-purple text-white rounded md:rounded-r shadow-lg no-underline">Subscribe 👉</button>
+        </div>
+     </div>
+    </section> <!-- End of newsletter work -->
+
+
+    <!-- Start of good byes work -->
+    <section class="mb-32">
+      <h3 class=" text-2xl md:text-3xl text-center">🎉Its been nice hanging out with you here, see you around 😉</h3>
+    </section>
+
+    <footer>
+      <!-- Links to jump to specific parts of the page -->
+      <nav class="">
+        <div class="list-reset flex justify-between items-baseline">
+          <div class="flex flex-wrap flex-1 items-baseline">
+              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Apps 📱</a>
+              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Blog 📓</a>
+              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Youtube 📹</a>
+              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Design 🎨</a>
+          </div>
+          <div class="flex flex-col sm:block items-baseline">
+              <a href="#" class="py-2 px-2 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Twitter</a>
+              <a href="#" class="py-2 px-2 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Github</a>
+              <a href="#" class="py-2 px-2 text-grey-darker no-underline border-b-2 border-transparent hover:border-pink">Medium</a>
+          </div>
+        </div>
+      </nav> <!-- End of Links to jump to specific parts of the page -->
+    </footer>
+  </div>
 </body>
 </html>
