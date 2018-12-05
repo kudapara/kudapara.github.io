@@ -101,6 +101,31 @@ body {
   padding: 10px;
   border: 2px gray solid;
 }
+
+.paynow-form__input-label {
+  padding: 10px;
+  display: block;
+  background: rgb(215, 216, 223);
+  font-weight: bold;
+  border-left: 2px gray solid;
+  border-top: 2px gray solid;
+  border-bottom: 2px gray solid;
+}
+.paynow-form__text-input:focus {
+  border-color: var(--color-purple)
+}
+
+.paynow-form__radio {
+  border: 2px var(--color-purple) solid;
+  padding: 5px;
+  color: var(--color-purple)
+}
+
+.paynow-form__radio--active, .paynow-form__radio:hover {
+  background: var(--color-purple);
+  color: white;
+}
+
 h3 {
   font-size: 25px;
   font-weight: normal
@@ -162,6 +187,7 @@ p {
   display: inline-block;
   text-align: center;
   transition: box-shadow, transform .2s;
+  line-height: inherit
 }
 
 .btn:hover {
@@ -194,10 +220,12 @@ p {
 /* Utlitities */
 .flex { display: flex }
 .items-center { align-items: center }
+.items-baseline { align-items: baseline }
 .justify-between { justify-content: space-between }
 .justify-center { justify-content: center }
 .mb-4 { margin-bottom: 1rem }
 .mb-8 { margin-bottom: 2rem }
+.mr-2 { margin-right: .5rem }
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -216,6 +244,9 @@ p {
 .text-center { text-align: center }
 .no-decoration { text-decoration: none }
 
+.w-1\/2-almost {
+  width: 48%;
+}
 
 .rounded-full {
   border-radius: 10000px
