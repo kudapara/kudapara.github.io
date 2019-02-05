@@ -1,243 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@kudapara" />
-  <meta name="twitter:creator" content="@kudapara" />
-  <meta property="og:title" content="Kudakwashe Paradzayi">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://kudapara.co.zw/images/open_graph_image.png">
-  <meta property="og:image:height" content="600">
-  <meta property="og:image:width" content="1350">
-  <meta property="og:url" content="https://kudapara.co.zw">
-  <meta property="og:description" content="I love coding and art">
-  <link rel="shortcut icon" href="assets/images/logo.png">
-  <script src="ga.js"></script>
-  <link rel="stylesheet" href="assets/css/tailwind-raw.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <title>Kudakwashe Paradzayi</title>
-  <style>
-    html {
-      font-family: montserrat, Candara, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background-image: url(/assets/images/code-background.svg);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kudapara" />
+    <meta name="twitter:creator" content="@kudapara" />
+    <meta property="og:title" content="Kudakwashe Paradzayi" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://kudapara.co.zw/images/open_graph_image.png"
+    />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:width" content="1350" />
+    <meta property="og:url" content="https://kudapara.co.zw" />
+    <meta property="og:description" content="I love coding and art" />
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script src="ga.js"></script>
+    <link rel="stylesheet" href="assets/css/tailwind-raw.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <title>Kudakwashe Paradzayi</title>
+    <style>
+      html {
+        font-family: "Source Sans Pro", Candara, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          "Open Sans", "Helvetica Neue", sans-serif;
+        /* background-color: #DFDBE5; */
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-    .container {
-      max-width: 700px;
-    }
+      .hero-section {
+        min-height: 80vh;
+        background-color: #4a3965;
+        color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+      }
 
-    .my-social-link {
-      transform: rotate(-30deg) skew(25deg);
-    }
+      .infinite-spinning {
+        animation: rotation 20s infinite linear;
+      }
 
-    .my-social-link span {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .my-social-link:hover {
-      cursor: pointer;
-    }
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
 
-    /* Hovers */
-    .my-social-link:hover span:nth-child(5) {
-      transform: translate(20px, -20px);
-      opacity: 1
-    }
+      .container {
+        max-width: 900px;
+      }
 
-    .my-social-link:hover span:nth-child(4) {
-      transform: translate(15px, -15px);
-      opacity: .8
-    }
+      .my-social-link {
+        transform: rotate(-30deg) skew(25deg);
+      }
 
-    .my-social-link:hover span:nth-child(3) {
-      transform: translate(10px, -10px);
-      opacity: .6
-    }
+      .my-social-link span {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .my-social-link:hover {
+        cursor: pointer;
+      }
 
-    .my-social-link:hover span:nth-child(2) {
-      transform: translate(5px, -5px);
-      opacity: .4
-    }
+      /* Hovers */
+      .my-social-link:hover span:nth-child(5) {
+        transform: translate(20px, -20px);
+        opacity: 1;
+      }
 
-    .my-social-link:hover span:nth-child(1) {
-      transform: translate(0, 0);
-      opacity: .2
-    }
+      .my-social-link:hover span:nth-child(4) {
+        transform: translate(15px, -15px);
+        opacity: 0.8;
+      }
 
-    /* Click simulate a downpress*/
-    .my-social-link:active span:nth-child(5) {
-      transform: translate(10px, -10px);
-      opacity: 1
-    }
+      .my-social-link:hover span:nth-child(3) {
+        transform: translate(10px, -10px);
+        opacity: 0.6;
+      }
 
-    .my-social-link:active span:nth-child(4) {
-      transform: translate(7.5px, -7.5px);
-      opacity: .8
-    }
+      .my-social-link:hover span:nth-child(2) {
+        transform: translate(5px, -5px);
+        opacity: 0.4;
+      }
 
-    .my-social-link:active span:nth-child(3) {
-      transform: translate(5px, -5px);
-      opacity: .6
-    }
+      .my-social-link:hover span:nth-child(1) {
+        transform: translate(0, 0);
+        opacity: 0.2;
+      }
 
-    .my-social-link:active span:nth-child(2) {
-      transform: translate(2.5px, -2.5px);
-      opacity: .4
-    }
+      /* Click simulate a downpress*/
+      .my-social-link:active span:nth-child(5) {
+        transform: translate(10px, -10px);
+        opacity: 1;
+      }
 
-    .my-social-link:active span:nth-child(1) {
-      transform: translate(0, 0);
-      opacity: .2
-    }
+      .my-social-link:active span:nth-child(4) {
+        transform: translate(7.5px, -7.5px);
+        opacity: 0.8;
+      }
 
-    /* Color the social links */
-    .my-social-link:nth-child(1) span {
-      background: #55acee;     
-    }
-    
-    .my-social-link:nth-child(2) span {
-      background: #3b5999;      
-    }
+      .my-social-link:active span:nth-child(3) {
+        transform: translate(5px, -5px);
+        opacity: 0.6;
+      }
 
-    .my-social-link:nth-child(3) span {
-      background: rgb(15, 15, 15);   
-   }
+      .my-social-link:active span:nth-child(2) {
+        transform: translate(2.5px, -2.5px);
+        opacity: 0.4;
+      }
 
-    .my-social-link:nth-child(4) span {
-      background: rgb(15, 15, 15);     
-    }
+      .my-social-link:active span:nth-child(1) {
+        transform: translate(0, 0);
+        opacity: 0.2;
+      }
 
-  </style>
+      /* Color the social links */
+      li:nth-child(1) .my-social-link span {
+        background: #55acee;
+      }
+
+      li:nth-child(2) .my-social-link span {
+        background: #3b5999;
+      }
+
+      li:nth-child(3) .my-social-link span {
+        background: rgb(15, 15, 15);
+      }
+
+      li:nth-child(4) .my-social-link span {
+        background: rgb(15, 15, 15);
+      }
+
+      .top-squiggle {
+        background: url(assets/images/noise-yellow.svg) repeat-x center top;
+      }
+
+      /* a[target="_blank"] {
+        background: #000;
+      } */
+    </style>
   </head>
-<body class="pb-10 text-grey-darker border-t-2 border-purple px-4">
-  <div class="text-center mb-4 text-white bg-pink py-4 shadow -mx-4">⚠️ This website is in testing mode. I am still testing some aspects, please 🙏 bear with me. Thanks </div>
-  <!-- The wrapper for the whole body -->
-  <div class="container mx-auto">
-
-    <!-- Links to jump to specific parts of the page -->
-    <nav class=" mb-10 block">
-      <div class="list-reset flex justify-between flex-wrap">
-        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex justify-between">
-            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Apps 📱</a>
-            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Blog 📓</a>
-            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Youtube 📹</a>
-            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Design 🎨</a>
-        </div>
-        <span class="flex-1 sm:hidden">&nbsp;</span> <!-- This is a hack to right align the subscribe button to the right-->
-        <a class="inline-flex items-center  py-2 px-4 bg-orange-light text-white rounded shadow no-underline hover:bg-orange justify-end" target="_blank" href="https://www.buymeacoffee.com/kudapara"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="BMC"><span style="margin-left:5px">Buy me a coffee</span></a>
-      </div>
-    </nav> <!-- End of Links to jump to specific parts of the page -->
-
-
+  <body class="pb-10 text-grey-darkest px-4">
+    <!-- <div class="text-center mb-4 text-white bg-pink py-4 shadow -mx-4">⚠️ This website is in testing mode. I am still testing some aspects, please 🙏 bear with me. Thanks </div> -->
     <!-- The hero section, where I introduce myself briefly -->
-    <section class="flex flex-col items-center mb-32">
-      <img src="assets/images/kuda_face.svg" style="height:280px;" class="mx-auto mb-8" alt="">
+    <section
+      class="hero-section relative mb-32 bg-red -mx-4"
+    >
       <!-- in place of the illustration, delete soon -->
-
-      <h3 class="text-2xl md:text-3xl mb-10">👋 Hi, I am Kuda</h3>
-      <p class="w-4/5 text-center mb-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tenetur quis. Inventore corrupti cupiditate eaque velit architecto consectetur quod eligendi?</p>
-      
-      <!-- Send me email-->
-      <a href="mailto:kgparadzayi@gmail.com" class="w-full md:w-auto mb-12 md:mb-0 text-center py-4 px-4 sm:px-10 bg-purple text-white rounded shadow-md no-underline hover:bg-purple-dark">Send me an email ✉️</a>
-  
-    </section> <!-- End of hero section-->  
-
-    <!-- Start of the projects I am working on -->
-    <section class="mb-32">
-      <h3 class=" text-2xl md:text-3xl text-center mb-10">and lately I have been working on these projects 💻</h3>
-    
-      <!-- project 1 -->
-      <div class="flex row sm:flex-row-reverse justify-between flex-wrap sm:flex-nowrap mb-10">
-      
-        <!-- Image part -->
-        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 ml-0 sm:ml-10 flex flex-col justify-between items-end">
-          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
-          <span class="bg-pink-lightest text-pink-darkest p-2 rounded">💰 $40/month</span>
-        </div>
-        <!--End of image part-->
-      
-        <!-- Description part -->
-        <div class="sm:flex-1 flex flex-col justify-between">
-          <div>
-            <h4 class="flex items-center mb-4">
-              <span class="inline-block h-10 w-10 bg-pink rounded mr-2">&nbsp;</span>
-              <span>School Metrics</span>
-            </h4>
-      
-            <p class="mb-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis dicta aliquid,
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-
-            <p class="mb-4"> Deserunt quas expedita harum. commodi iste
-                consectetur, unde inventore, esse fugiat repellendus id perferendis necessitatibus. Ipsum, facere. Eos
-                perferendis cum ut alias!</p>
+      <!-- Links to jump to specific parts of the page -->
+      <!-- <nav class="px-10 pt-10 block">
+        <div class="list-reset flex justify-between flex-wrap">
+          <div class="w-full sm:w-auto mb-4 sm:mb-0 flex justify-between">
+            <a
+              href="#"
+              class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-white font-bold no-underline border-b-2 border-transparent hover:border-pink"
+              >Apps 📱</a
+            >
+            <a
+              href="#"
+              class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-white font-bold no-underline border-b-2 border-transparent hover:border-pink"
+              >Blog 📓</a
+            >
+            <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-white font-bold no-underline border-b-2 border-transparent hover:border-pink">Youtube
+            📹</a>
+          <a href="#" class="py-2 mr-0 sm:mr-2 px-3 sm:px-4 text-white font-bold no-underline border-b-2 border-transparent hover:border-pink">Design
+            🎨</a>
           </div>
-          <button class="w-full py-4 px-6 bg-purple text-white rounded shadow">Visit the app 📂</button>
         </div>
-        <!--End of description-->
+      </nav> -->
+      <!-- End of Links to jump to specific parts of the page -->
+      <div class="px-10 py-20">
+        <h3 class="text-2xl md:text-3xl mb-10">👋 Hi, I am Kuda</h3>
+        <p class="max-w-md text-center- mb-4 text-xl fonr">
+          I am a Software Engineering student from the Harare Institute of
+          Technology (HIT), in the heart of Harare, Zimbabwe. Programming and
+          design are my passion.
+        </p>
+
+        <p class="max-w-md text-center- mb-12 text-xl fonr">
+          At the moment I am looking for internship for a Software Engineering
+          position. If your company is hiring please get in touch.
+        </p>
+
+        <!-- Send me email-->
+        <a
+          href="mailto:hello@kudapara.com?subject=Hey%20Kuda%20we%20would%20like%20to%20hire%20you"
+          class="inline-block w-full md:w-auto mb-12 md:mb-0 text-center py-4 px-4 sm:px-24 bg-white text-purple rounded shadow-md no-underline hover:bg-purple-lightest hover:shadow-lg"
+          >Hire Me 🙋</a
+        >
       </div>
-      <!--End of project 1-->
 
+      <img
+        src="assets/images/kp-1.jpg"
+        style="height:200px; margin-bottom: -100px;"
+        class="infinite-spinning absolute pin-b ml-10 border-8 border-white rounded-full"
+        alt=""
+      />
+    </section>
+    <!-- End of hero section-->
 
-      <!-- project 2 -->
-      <div class="flex justify-between items-stretch flex-wrap sm:flex-nowrap mb-10">
-        
-        <!-- Image part -->
-        <div class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 mr-0 sm:mr-10 flex flex-col justify-between items-start">
-          <img src="assets/images/placeholder.jpg" class="mb-2" alt="">
-          <span class="bg-pink-lightest text-pink-darkest p-2 rounded">💰 Free</span>
-        </div> <!--End of image part-->
+    <!-- The wrapper for the whole body -->
+    <div class="container mx-auto">
+      <!-- Start of the projects I am working on -->
+      <section class="mb-32">
+        <h3 class=" text-2xl md:text-3xl text-center mb-10">
+          and lately I have been working on these projects 💻
+        </h3>
 
-        <!-- Description part -->
-        <div class="sm:flex-1 flex flex-col justify-between">
-          <div>
-            <h4 class="flex items-center mb-4">
-              <span class="inline-block h-10 w-10 bg-pink rounded mr-2">&nbsp;</span>
-              <span>Vault</span>
-            </h4>
-
-            <p class="mb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis dicta aliquid,
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
-  
-              <p class="mb-4"> Deserunt quas expedita harum. commodi iste
-                  consectetur, unde inventore, esse fugiat repellendus id perferendis necessitatibus. Ipsum, facere. Eos
-                  perferendis cum ut alias!</p>
+        <!-- project 1 -->
+        <div
+          class="flex row sm:flex-row-reverse justify-between flex-wrap sm:flex-nowrap mb-24"
+        >
+          <!-- Image part -->
+          <div
+            class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 ml-0 sm:ml-10 flex flex-col justify-between items-end"
+          >
+          <span class="bg-pink-lightest text-pink-darkest p-2 rounded mb-2"
+            >💰 $10/computer/month</span
+          >
+            <img src="assets/images/complock.jpg" alt="" />
           </div>
-          <button class="w-full py-4 px-6 bg-purple text-white rounded shadow">Download for windows ☁️👇</button>
-        </div> <!--End of description-->
-      </div> <!--End of project 2-->
-      
-      <a href="/projects" class="inline-block py-2 mr-2 px-4 text-grey-darker font-bold no-underline border-b-2  text-purple-dark border-pink">👀 Checkout more of my projects 👉</a>
-    </section> <!-- End of the projects i am working on-->
+          <!--End of image part-->
 
-    <!-- Start of blog posts -->
-    <section class="mb-32">
-      <h3 class=" text-2xl md:text-3xl text-center mb-10">✍ sometimes I write my thoughts and opinions down</h3>
-      <ul class="list-reset mb-10">
-        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">15. Dynamically reload a vue project using Netlify</a></li>
-        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">14. Why I hate windows so much</a></li>
-        <li class="m-2 py-4 border-b border-dashed border-purple"><a href="#" class="text-grey-darkest hover:text-purple no-underline">13. Inscape outperfoms Illustrator, by far</a></li>
-      </ul>
+          <!-- Description part -->
+          <div class="sm:flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="flex items-center mb-4">
+                <span class="inline-block h-10 w-10 bg-pink rounded mr-2"
+                  >&nbsp;</span
+                >
+                <span>Comp Lock</span>
+              </h4>
 
-      <a href="#" class="inline-block py-2 mr-2 px-4 text-grey-darker font-bold no-underline border-b-2  text-purple-dark border-pink">👀 Read more of my posts 👉</a>
-    </section><!-- End of blog posts -->
+              <p class="mb-2">
+                Comp Lock is a software as a service solution, mainly used by
+                schools in order to efficiently allocate computer usage time
+                amongst students.
+              </p>
 
-    <!-- Start of youtube -->
+              <p class="mb-4">
+                <strong>Comp Lock</strong> has the following features, ability
+                to give each class specific time limits, screenshots, monthly
+                report of computer usage, account suspension for computer misuse
+                and remote signing out of accounts.
+              </p>
+            </div>
+            <a
+            href="https://github.com/byteBridge/comp-lock#interested"
+            target="_blank"
+              class="inline-block no-underline text-center w-full py-4 px-6 bg-black border-b-2 border-purple text-white rounded shadow hover:shadow-lg"
+            >
+              Download for windows ☁️👇
+          </a>
+          </div>
+          <!--End of description-->
+        </div>
+        <!--End of project 1-->
+
+        <!-- project 2 -->
+        <div
+          class="flex justify-between items-stretch flex-wrap sm:flex-nowrap mb-10"
+        >
+          <!-- Image part -->
+          <div
+            class="w-full sm:w-auto mb-4 sm:mb-0 flex-1 mr-0 sm:mr-10 flex flex-col justify-between items-start"
+          >
+            <img
+              src="assets/images/the-good-shepherd.png"
+              class="mb-2"
+              alt=""
+            />
+            <!-- <span class="bg-pink-lightest text-pink-darkest p-2 rounded">💰 Free</span> -->
+          </div>
+          <!--End of image part-->
+
+          <!-- Description part -->
+          <div class="sm:flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="flex items-center mb-4">
+                <span class="inline-block h-10 w-10 bg-pink rounded mr-2"
+                  >&nbsp;</span
+                >
+                <span>Good Shepherd Center website</span>
+              </h4>
+
+              <p class="mb-2">
+                A child who is orphaned or has a devastating background, who is
+                lacking access to food, shelter and decent education, or is
+                living on the streets in poor country like Zimbabwe is extremely
+                vulnerable. For these children, living to see the next day is
+                all they need.The Good Shepherd Center provides, beyond food and
+                shelter, a Christian set of principles and schooling.
+              </p>
+
+              <p class="mb-2">You can also lend a helping hand.</p>
+            </div>
+            <a
+              href="https://the-good-shepherd.netlify.com/"
+              target="_blank"
+              class="inline-block w-full py-4 px-6 text-white text-center bg-black border-b-2 border-purple no-underline rounded shadow hover:hover-lg hover:cursor-pointer"
+              >Visit the website 👉</a
+            >
+          </div>
+          <!--End of description-->
+        </div>
+        <!--End of project 2-->
+
+        <a
+          href="https://github.com/kudapara"
+          target="_blank"
+          class="inline-block py-2 mr-2 px-4 text-grey-darker font-bold no-underline border-b-2  text-purple-dark border-pink"
+          >👀 Checkout more of my projects 👉</a
+        >
+      </section>
+      <!-- End of the projects i am working on-->
+
+      <!-- Start of blog posts -->
+      <section class="py-24 top-squiggle">
+        <h3 class=" text-2xl md:text-3xl text-center mb-10">
+          ✍ sometimes I write my thoughts and opinions down
+        </h3>
+        <ul class="list-reset mb-10">
+          <li class="m-2 py-4 border-b border-dashed border-purple">
+            <a href="#" class="text-grey-darkest hover:text-purple no-underline"
+              >1. Is your codebase rock SOLID?</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="https://medium.com/@kudapara"
+          target="_blank"
+          class="inline-block py-2 mr-2 px-4 text-grey-darker font-bold no-underline border-b-2  text-purple-dark border-pink"
+          >👀 Read more of my posts 👉</a
+        >
+      </section>
+      <!-- End of blog posts -->
+
+      <!-- Start of youtube --
     <section class="mb-32">
       <h3 class=" text-2xl md:text-3xl text-center mb-10">whilst sometimes I talk to my computer while recording the screen 😺📹</h3>
 
@@ -257,9 +374,9 @@
         <button class="py-2 px-4 bg-red text-white rounded shadow no-underline hover:bg-red-dark hover:shadow-md">Subscribe</button>
       </div>
     </section>
-    <!-- End of youtube -->
+    !-- End of youtube -->
 
-    <!-- Start of designer work -->
+      <!-- Start of designer work --
     <section class="mb-32">
       <h3 class=" text-2xl md:text-3xl text-center mb-10">and oh I am a designer 🎨 too 🙈</h3>
       <div class="sm:flex mb-8">
@@ -280,81 +397,211 @@
       </div>
 
       <a href="#" class="inline-block py-2 mr-2 px-4 text-grey-darker font-bold no-underline border-b-2  text-purple-dark border-pink">👀 Explore more of my design 👉</a>
-    </section> <!--End of designer work-->
+    </section> !--End of designer work-->
 
-    <!-- Start of the social network-->
-    <section class="mb-32">
-      <h3 class="text-2xl md:text-3xl text-center mb-10">from anywhere in the world we can connect 👫</h3>
-      <p class="mb-12 text-center">just look for me at my virtual homes 👇</p>
+      <!-- Start of the social network-->
+      <section class="py-24 top-squiggle">
+        <h3 class="text-2xl md:text-3xl text-center mb-10">
+          from anywhere in the world we can connect 👫
+        </h3>
+        <p class="mb-12 text-center">just look for me at my virtual homes 👇</p>
 
-      <ul class="w-4/5 mx-auto md:w-3/5  list-reset flex justify-between">
-        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
-          <span></span> <span></span> <span></span> <span></span> <span>
-              <a href="https://twitter.com/kudapara" target="_blank"><svg fill="white" class="h-10 w-10" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
-          </span>
-        </li>
-        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
-          <span></span> <span></span> <span></span> <span></span> <span>
-              <a href="https://dev.to/kudapara" target="_blank"> <svg fill="white" class="h-10 w-10"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img"><title>dev.to icon</title><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18z"/><path d="M0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/></svg></a>
-          </span>
-        </li>
-        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded">
-          <span></span> <span></span> <span></span> <span></span> <span>
-              <a href="https://medium.com/@kudapara" target="_blank"> <svg  fill="white" class="h-10 w-10" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Medium icon</title><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.067a.376.376 0 0 0 .143.361l1.257 1.234v.271h-6.322v-.27l1.302-1.265c.128-.128.128-.165.128-.36V8.99l-3.62 9.195h-.49L6.69 8.99v6.163a.85.85 0 0 0 .233.707l1.694 2.054v.271H3.815v-.27L5.51 15.86a.82.82 0 0 0 .218-.707V8.027a.624.624 0 0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z"/></svg></a>
-          </span>
-        </li>
-        <li class="my-social-link relative h-12 w-12 flex items-center justify-center text-white rounded">
-          <span></span> <span></span> <span></span> <span></span> <span>
-              <a href="https://github.com/kudapara" target="_blank"> <svg fill="white" class="h-10 w-10" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-          </span>
-        </li>
-      </ul>
-    </section>
+        <ul class="w-4/5 mx-auto md:w-3/5  list-reset flex justify-between">
+          <li>
+            <a
+              href="https://twitter.com/kudapara"
+              class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded"
+              target="_blank"
+            >
+              <span></span> <span></span> <span></span> <span></span>
+              <span>
+                <svg
+                  fill="white"
+                  class="h-10 w-10"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Twitter icon</title>
+                  <path
+                    d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://dev.to/kudapara"
+              class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded"
+              target="_blank"
+            >
+              <span></span> <span></span> <span></span> <span></span>
+              <span>
+                <svg
+                  fill="white"
+                  class="h-10 w-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  role="img"
+                >
+                  <title>dev.to icon</title>
+                  <path
+                    d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18z"
+                  />
+                  <path
+                    d="M0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="my-social-link relative h-12 w-12 flex items-center justify-center text-white mr-8 rounded"
+              href="https://medium.com/@kudapara"
+              target="_blank"
+            >
+              <span></span> <span></span> <span></span> <span></span>
+              <span>
+                <svg
+                  fill="white"
+                  class="h-10 w-10"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Medium icon</title>
+                  <path
+                    d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.067a.376.376 0 0 0 .143.361l1.257 1.234v.271h-6.322v-.27l1.302-1.265c.128-.128.128-.165.128-.36V8.99l-3.62 9.195h-.49L6.69 8.99v6.163a.85.85 0 0 0 .233.707l1.694 2.054v.271H3.815v-.27L5.51 15.86a.82.82 0 0 0 .218-.707V8.027a.624.624 0 0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/kudapara"
+              class="my-social-link relative h-12 w-12 flex items-center justify-center text-white rounded"
+              target="_blank"
+            >
+              <span></span> <span></span> <span></span> <span></span>
+              <span>
+                <svg
+                  fill="white"
+                  class="h-10 w-10"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>GitHub icon</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
 
-    <!-- Start of newsletter work -->
-    <section class="mb-32">
-      <h3 class="text-2xl md:text-3xl text-center mb-10">Now that you have seen a glimpse of who I am and what I do 😎</h3>
+      <!-- Start of newsletter work
+      <section class="mb-24">
+        <h3 class="text-2xl md:text-3xl text-center mb-10">
+          Now that you have seen a glimpse of who I am 😎
+        </h3>
 
-      <p class="sm:w-4/5 mx-auto mb-10">I send out a weekly digest every Thursday of the my work for the week and also some sick picks that I find interesting.
-        No span, I promise ✌️</p>
+        <p class="sm:w-4/5 mx-auto mb-10">
+          I send out a weekly digest every Thursday of the my work for the week
+          and also some sick picks that I find interesting. No span, I promise
+          ✌️
+          <a
+            href="https://twitter.com/intent/follow?screen_name=kudapara"
+            target="_blank"
+            class="inline-block py-2 px-4 bg-purple text-white mt-4"
+            >Follow me on twitter</a
+          >
+        </p> -->
 
-      <h4 class="mb-4 text-center">Subscribe to my newsletter 📰</h4>
-     <div class="bg-pink py-6 -mx-4 px-4 rounded">
-        <div class="flex w-full sm:w-3/5 sm:mx-auto flex-wrap md:flex-nowrap">
-          <input type="email" name="" id="" class="w-full md:w-auto md:flex-1 mb-4 md:mb-0 py-4 px-4 bg-white rounded md:rounded-l shadow-lg">
-          <button class="w-full md:w-auto py-4 px-4 bg-purple text-white rounded md:rounded-r shadow-lg no-underline">Subscribe 👉</button>
-        </div>
-     </div>
-    </section> <!-- End of newsletter work -->
+        <!--
 
-
-    <!-- Start of good byes work -->
-    <section class="mb-32">
-      <h3 class=" text-2xl md:text-3xl text-center">🎉Its been nice hanging out with you here, see you around 😉</h3>
-    </section>
-
-    <footer>
-      <!-- Links to jump to specific parts of the page -->
-      <nav class="">
-        <div class="list-reset flex justify-between items-baseline">
-          <div class="flex flex-wrap flex-1 items-baseline">
-              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Apps 📱</a>
-              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Blog 📓</a>
-              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Youtube 📹</a>
-              <a href="#" class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Design 🎨</a>
+        <h4 class="mb-4 text-center">Subscribe to my newsletter 📰</h4>
+        <div class="bg-pink py-6 -mx-4 px-4 rounded">
+          <div class="flex w-full sm:w-3/5 sm:mx-auto flex-wrap md:flex-nowrap">
+            <input
+              type="email"
+              name=""
+              id=""
+              class="w-full md:w-auto md:flex-1 mb-4 md:mb-0 py-4 px-4 bg-white rounded md:rounded-l shadow-lg"
+            />
+            <button
+              class="w-full md:w-auto py-4 px-4 bg-purple text-white rounded md:rounded-r shadow-lg no-underline"
+            >
+              Subscribe 👉
+            </button>
           </div>
-          <div class="flex flex-col sm:block items-baseline">
-              <a href="#" class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Twitter</a>
-              <a href="#" class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Github</a>
-              <a href="#" class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink">Medium</a>
-          </div>
-        </div>
-      </nav> <!-- End of Links to jump to specific parts of the page -->
-    </footer>
-  </div>
-</body>
+        </div> -->
+      </section>
+      <!-- End of newsletter work -->
 
-<!-- Start of Async Drift Code -->
+      <!-- Start of good byes work -->
+      <section class="py-24 top-squiggle">
+        <h3 class=" text-2xl md:text-3xl text-center">
+          🎉Its been nice hanging out with you here, see you around 😉
+        </h3>
+      </section>
+
+      <footer>
+        <!-- Links to jump to specific parts of the page -->
+        <nav class="">
+          <div class="list-reset flex justify-between items-baseline">
+            <div class="flex flex-wrap flex-1 items-baseline">
+              <a
+                href="#"
+                class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Apps 📱</a
+              >
+              <a
+                href="#"
+                class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Blog 📓</a
+              >
+              <a
+                href="#"
+                class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Youtube 📹</a
+              >
+              <a
+                href="#"
+                class="py-2 px-2 w-1/2 sm:w-auto text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Design 🎨</a
+              >
+            </div>
+            <div class="flex flex-col sm:block items-baseline">
+              <a
+                href="https://twitter.com/kudapara"
+                class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Twitter</a
+              >
+              <a
+                href="https://github.com/kudapara"
+                class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Github</a
+              >
+              <a
+                href="https://medium.com/@kudapara"
+                class="py-2 px-2 text-grey-darker font-bold no-underline border-b-2 border-transparent hover:border-pink"
+                >Medium</a
+              >
+            </div>
+          </div>
+        </nav>
+        <!-- End of Links to jump to specific parts of the page -->
+      </footer>
+    </div>
+  </body>
+
+  <!-- Start of Async Drift Code --
 <script>
   "use strict";
   
@@ -381,5 +628,5 @@
   drift.SNIPPET_VERSION = '0.3.1';
   drift.load('absv4ha4mm7u');
   </script>
-  <!-- End of Async Drift Code -->
+  -- End of Async Drift Code -->
 </html>

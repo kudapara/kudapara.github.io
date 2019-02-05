@@ -1,0 +1,85 @@
+@charset "utf-8";
+/*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
+
+@import url(font-awesome.min.css);
+@import "sass/abstracts/_all";
+@import "sass/base/_all";
+@import "sass/components/_all";
+@import "sass/layout/_all";
+@import "sass/utilities/_all";
+@import "sass/pages/_all";
+
+// $color-primary-light: #6f5cff;
+// $color-primary-dark: #9638ff;
+// $color-primary: #9638ff;
+// $shadow: 0 .2rem 2rem rgba(0,0,0,0.3);
+// $color-grey-dark: #ccc;
+
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// html {
+//   font-size: 62.5%;
+//   border-top: $color-primary-light 5px solid;
+// }
+
+// body {
+//   font-size: 1.6rem;
+//   background: url(../../assets/code-background.svg);
+//   font-family: Ubuntu, Roboto Slab;
+// }
+
+
+
+
+// .footer {
+//   background: rgba($color-primary, 0.1);
+//   display: flex;
+//   justify-content: space-between;
+//   color: $color-primary; //white;
+//   border-top: 4px solid $color-primary;
+//   padding: 5rem 8rem;
+
+//   &__pages-links,
+//   &__social-links {
+//     margin-bottom: 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: 3rem;
+
+
+//     & > a {
+//       text-decoration: none;
+//       font: inherit;
+//       color: inherit;
+//       text-transform: uppercase;
+//       letter-spacing: 0.2rem;
+
+//       &:not(:last-child) {
+//         margin-bottom: 1rem;
+//       }
+//     }
+//   }
+
+
+//   &__social-links {
+//     text-align: right;
+
+//     & i { margin-left: 1rem; }
+    
+//   }
+
+//   &__link {
+//     transition: all .2s ease;
+//     &:hover {
+//       transform: scale(1.03);
+//       background: rgba(white, 0.1);
+//     }
+//   }
+
+// }
+
